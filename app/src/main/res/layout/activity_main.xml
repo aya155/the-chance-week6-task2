@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:background="@drawable/starboxcoffebackground"
+    tools:context=".MainActivity">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="300dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/productName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/arrowIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/headerIconsMargin"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/detailsText"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/detailsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dm_sans_bold"
+            android:text="@string/detailsText"
+            android:textColor="@color/blackVariant"
+            android:textStyle="bold"
+            android:textSize="@dimen/detailsTextSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/notifications"
+            app:layout_constraintStart_toEndOf="@+id/arrowIcon"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/notifications"
+            android:layout_width="@dimen/notificationsIconSize"
+            android:layout_height="@dimen/notificationsIconSize"
+            android:layout_margin="@dimen/headerIconsMargin"
+            android:src="@drawable/ic_notifications"
+            app:layout_constraintStart_toEndOf="@id/detailsText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/notificationsCircleSize"
+            android:layout_height="@dimen/notificationsCircleSize"
+            app:cardBackgroundColor="@color/green"
+            app:cardCornerRadius="@dimen/notificationsCircleRadius"
+            app:layout_constraintEnd_toEndOf="@id/notifications"
+            app:layout_constraintTop_toTopOf="@id/notifications"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="@dimen/productImageSize"
+        android:layout_height="@dimen/productImageSize"
+        android:src="@drawable/product"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/productNameBottomMargin"
+        android:fontFamily="@font/dm_sans_bold"
+        android:text="@string/productName"
+        android:textColor="@color/blackVariant"
+        android:textStyle="bold"
+        android:textSize="@dimen/productNameTextSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerConstraintLayout" />
+
+    <TextView
+        android:id="@+id/textPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans_bold"
+        android:text="@string/price"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:textSize="@dimen/priceTextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/productName"
+        app:layout_constraintTop_toTopOf="@+id/productName"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans_bold"
+        android:text="@string/popularity"
+        android:textColor="@color/grey"
+        android:textStyle="bold"
+        android:textSize="@dimen/popularityTextSize"
+        android:layout_marginTop="@dimen/popularityTopMargin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPrice" />
+
+
+    <TextView
+        android:id="@+id/options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/optionsTextTopMargin"
+        android:fontFamily="@font/dm_sans_bold"
+        android:text="@string/optionsText"
+        android:textColor="@color/grey"
+        android:textStyle="bold"
+        android:textSize="@dimen/optionsTextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/productName"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/flavourLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/orderButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/options"
+        app:layout_constraintVertical_bias="0.2">
+
+        <ImageButton
+            android:layout_width="@dimen/optionButtonSize"
+            android:layout_height="@dimen/optionButtonSize"
+            android:src="@drawable/notifications"
+            android:background="@drawable/my_background"
+            android:backgroundTint="@color/green_lite"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/optionButtonPadding"
+            android:adjustViewBounds="true"
+            app:tint="@color/green" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dm_sans_bold"
+            android:text="@string/flavourOption1"
+            android:textColor="@color/blackVariant"
+            android:textStyle="bold"
+            android:textSize="@dimen/flavourOptionsTextSize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dm_sans_bold"
+            android:text="@string/descriptionOption1"
+            android:textColor="@color/grey"
+            android:textStyle="bold"
+            android:textSize="@dimen/descriptionOptionsTextSize" />
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/flavourLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/flavourLayout1"
+            app:layout_constraintTop_toTopOf="@id/flavourLayout1"
+            app:layout_constraintEnd_toStartOf="@id/flavourLayout3">
+
+            <ImageButton
+                android:layout_width="@dimen/optionButtonSize"
+                android:layout_height="@dimen/optionButtonSize"
+                android:src="@drawable/notifications"
+                android:background="@drawable/my_background"
+                android:backgroundTint="@color/green_lite"
+                android:scaleType="fitCenter"
+                android:padding="@dimen/optionButtonPadding"
+                android:adjustViewBounds="true"
+                app:tint="@color/green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:text="@string/flavourOption2"
+                android:textColor="@color/blackVariant"
+                android:textStyle="bold"
+                android:textSize="@dimen/flavourOptionsTextSize"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:text="@string/descriptionOption2"
+                android:textSize="@dimen/descriptionOptionsTextSize"
+                android:textColor="@color/grey"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/flavourLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/flavourLayout2"
+            app:layout_constraintTop_toTopOf="@id/flavourLayout2"
+            app:layout_constraintEnd_toStartOf="@id/flavourLayout4">
+
+            <ImageButton
+                android:layout_width="@dimen/optionButtonSize"
+                android:layout_height="@dimen/optionButtonSize"
+                android:src="@drawable/notifications"
+                android:background="@drawable/my_background"
+                android:backgroundTint="@color/green"
+                android:scaleType="fitCenter"
+                android:padding="@dimen/optionButtonPadding"
+                android:adjustViewBounds="true"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:text="@string/flavourOption3"
+                android:textColor="@color/blackVariant"
+                android:textStyle="bold"
+                android:textSize="@dimen/flavourOptionsTextSize" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:text="@string/descriptionOption3"
+                android:textSize="@dimen/descriptionOptionsTextSize"
+                android:textColor="@color/grey"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/flavourLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="@id/flavourLayout3"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageButton
+                android:layout_width="@dimen/optionButtonSize"
+                android:layout_height="@dimen/optionButtonSize"
+                android:src="@drawable/notifications"
+                android:background="@drawable/my_background"
+                android:backgroundTint="@color/green_lite"
+                android:scaleType="fitCenter"
+                android:padding="@dimen/optionButtonPadding"
+                android:adjustViewBounds="true"
+                app:tint="@color/green" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:text="@string/flavourOption4"
+                android:textColor="@color/blackVariant"
+                android:textStyle="bold"
+                android:textSize="@dimen/flavourOptionsTextSize"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:text="@string/descriptionOption4"
+                android:textSize="@dimen/descriptionOptionsTextSize"
+                android:textColor="@color/grey"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    <Button
+        android:id="@+id/minusButton"
+        android:layout_width="@dimen/minusButtonSize"
+        android:layout_height="@dimen/minusButtonSize"
+        android:background="@drawable/circle"
+        android:fontFamily="@font/dm_sans_bold"
+        android:text="@string/minusButton"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/minusPlusButtonsTextSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flavourLayout1"
+        app:layout_constraintVertical_bias="0.71" />
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="@dimen/counterLayoutSize"
+        android:layout_height="@dimen/counterLayoutSize"
+        android:fontFamily="@font/dm_sans_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/counter"
+        android:textColor="@color/blackVariant"
+        android:textStyle="bold"
+        android:textSize="@dimen/counterTextSize"
+        app:layout_constraintBottom_toBottomOf="@id/minusButton"
+        app:layout_constraintTop_toTopOf="@id/minusButton"
+        app:layout_constraintEnd_toStartOf="@+id/plusButton"
+        app:layout_constraintStart_toEndOf="@+id/minusButton" />
+
+
+    <Button
+        android:id="@+id/plusButton"
+        android:layout_width="@dimen/minusButtonSize"
+        android:layout_height="@dimen/minusButtonSize"
+        android:background="@drawable/circle"
+        android:text="@string/plusButton"
+        android:fontFamily="@font/dm_sans_bold"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/minusPlusButtonsTextSize"
+        app:layout_constraintBottom_toBottomOf="@id/counter"
+        app:layout_constraintStart_toEndOf="@id/counter"
+        app:layout_constraintTop_toTopOf="@id/counter"/>
+
+    <Button
+        android:id="@+id/orderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/order_shape"
+        android:text="@string/orderButtonText"
+        android:fontFamily="@font/dm_sans_bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/orderButtonTextSize"
+        android:padding="@dimen/orderButtonPadding"
+        android:paddingEnd="@dimen/orderButtonEndStartPadding"
+        android:paddingStart="@dimen/orderButtonEndStartPadding"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flavourLayout4"
+        app:layout_constraintVertical_bias="0.71"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

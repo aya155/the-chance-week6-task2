@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Second_task_android</string>
+    <string name="detailsText">Details</string>
+    <string name="productName">White \nCupcake</string>
+    <string name="price">$30.00</string>
+    <string name="popularity">Best Sales</string>
+    <string name="optionsText">Flavour Options</string>
+    <string name="flavourOption1">Blueberry</string>
+    <string name="flavourOption2">Banana</string>
+    <string name="flavourOption3">Single</string>
+    <string name="flavourOption4">Custom</string>
+    <string name="descriptionOption1">12 F1Oz</string>
+    <string name="descriptionOption2">16 F1Oz</string>
+    <string name="descriptionOption3">24 F1Oz</string>
+    <string name="descriptionOption4">__ F1Oz</string>
+    <string name="minusButton">-</string>
+    <string name="counter">1</string>
+    <string name="plusButton">+</string>
+    <string name="orderButtonText">Add to Order</string>
+</resources>

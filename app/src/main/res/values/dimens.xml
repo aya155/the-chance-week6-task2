@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="headerIconsMargin">8dp</dimen>
+    <dimen name="detailsTextSize">18sp</dimen>
+    <dimen name="notificationsIconSize">32dp</dimen>
+    <dimen name="notificationsCircleSize">12dp</dimen>
+    <dimen name="notificationsCircleRadius">50dp</dimen>
+    <dimen name="productImageSize">320dp</dimen>
+    <dimen name="productNameBottomMargin">300dp</dimen>
+    <dimen name="productNameTextSize">24sp</dimen>
+    <dimen name="priceTextSize">24sp</dimen>
+    <dimen name="popularityTextSize">12sp</dimen>
+    <dimen name="popularityTopMargin">12dp</dimen>
+    <dimen name="optionsTextTopMargin">16dp</dimen>
+    <dimen name="optionsTextSize">16sp</dimen>
+    <dimen name="linearLayoutOptionsTopMargin">24dp</dimen>
+    <dimen name="optionButtonSize">60dp</dimen>
+    <dimen name="optionButtonPadding">12dp</dimen>
+    <dimen name="flavourOptionsTextSize">16sp</dimen>
+    <dimen name="descriptionOptionsTextSize">12sp</dimen>
+    <dimen name="minusButtonSize">42dp</dimen>
+    <dimen name="minusPlusButtonsTextSize">16sp</dimen>
+    <dimen name="minusPlusButtonsBottomMargin">32dp</dimen>
+    <dimen name="counterLayoutSize">35dp</dimen>
+    <dimen name="counterTextSize">24sp</dimen>
+    <dimen name="orderButtonTextSize">16sp</dimen>
+    <dimen name="orderButtonPadding">12dp</dimen>
+    <dimen name="orderButtonEndStartPadding">24dp</dimen>
+</resources>
